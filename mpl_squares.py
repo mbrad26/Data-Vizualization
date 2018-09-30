@@ -1,9 +1,14 @@
 import matplotlib.pyplot as plt
 
-input_values = [1, 2, 3, 4, 5]
-squares = [1, 4, 9, 16, 25]
 
-plt.plot(input_values, squares, linewidth=5)
+numbers = list(range(100))
+squares = [x**2 for x in numbers]
+cubes = [x**3 for x in numbers]
+
+plt.figure(figsize=(10, 6))
+
+plt.plot(squares, linewidth=5)
+plt.plot(cubes, linewidth=5)
 
 plt.title('Squares Numbers', fontsize=24)
 plt.xlabel('Value', fontsize=14)
