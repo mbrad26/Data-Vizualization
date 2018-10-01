@@ -8,7 +8,6 @@ filename = 'sitka_weather_2014.csv'
 with open(filename) as f:
     reader = csv.reader(f)
     header = next(reader)
-
     dates, highs, lows = [], [], []
     for row in reader:
         date = datetime.strptime(row[0], '%Y-%m-%d')
