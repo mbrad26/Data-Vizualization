@@ -20,7 +20,6 @@ for dict in pop_data:
     if dict['Year'] == '2010':
         country_name = dict['Country Name']
         population = int(float(dict['Value']))
-        print(f'{country_name}: {population}')
         code = get_code(country_name)
         if code:
             cc_population[code] = population
